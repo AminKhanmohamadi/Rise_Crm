@@ -1,3 +1,4 @@
 -r base.txt
 drf-spectacular
 djoser
+djangorestframework_simplejwt
