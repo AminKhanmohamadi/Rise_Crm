@@ -26,8 +26,8 @@ class CustomUser(AbstractUser ,PermissionsMixin):
         ('Male', 'Male'),
         ('Female', 'Female'),
     ]
+    username = None
 
-   
     email = models.EmailField(unique=True)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
@@ -66,7 +66,7 @@ class Customer(models.Model):
         ('Organization', 'Organization'),
     ]
 
-    owner = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='customer')
+    owner = models.OneToOneField(CustomUser, on_delete=models.PROTECT, related_name='customer')
     name = models.CharField(max_length=100)
     type = models.CharField(max_length=20, choices=TYPE_CHOICES, default='Person')
     address = models.TextField(blank=True, null=True)

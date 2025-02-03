@@ -4,7 +4,6 @@ from accounts.models import CustomUser , Customer , GroupCustomer
 # Register your models here.
 @admin.register(CustomUser)
 class CustomUserAdmin(UserAdmin):
-    model = CustomUser
     add_fieldsets = (
         (
             None,
