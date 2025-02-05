@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'djoser',
     # local apps
     'accounts.apps.AccountsConfig',
+    'projects.apps.ProjectsConfig',
 ]
 
 MIDDLEWARE = [
